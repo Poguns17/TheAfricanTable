@@ -49,8 +49,8 @@ body {
 .nav-links {
     display: flex;
     gap: 20px;
+    color: emerald;
 }
-
 .nav-links a {
     text-decoration: none;
     color: emerald;
@@ -60,6 +60,7 @@ body {
 .nav-links a:hover {
     color: #fafafa;
 }
+
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
@@ -114,6 +115,121 @@ main {
 .flash-success { background: #d4edda; }
 .flash-error { background: #f8d7da; }
 
+
+
+
+/* HOME PAGE */
+.home-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.welcome-text {
+    flex: 1;
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.discover-btn {
+    padding: 15px 30px;
+    background-color: #C1272D;
+    color: #F5F5DC;
+    text-decoration: none;
+    border-radius: 80px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.discover-btn:hover {
+    background-color: #A01F24;
+    transform: translateY(-2px);
+}
+
+/* Welcome Image */
+.welcome-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Discover Countries Section */
+.discover-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.discover-section {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.countries-preview {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countries-preview .country-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    width: 150px;
+    text-decoration: none;
+    color: #2c3e50;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.countries-preview .country-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.countries-preview .country-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.countries-preview .country-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+/* COUNTRIES PAGE */
 
 .container {
     width: 90%;
