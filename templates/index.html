@@ -6,13 +6,40 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    {% extends "base.html" %}
+{% extends "base.html" %}
 
-    {% block content %}
+{% block content %}
 
-    <h1>Welcome to the African Table!</h1>
-    <p> This is the home page</p>
+<div class="home-container">
+    <!--welcome section-->
+    <section class="welcome-section">
+        <div class="welcome-text">
+            <h1>WELCOME TO THE AFRICAN TABLE!</h1>
+            <p>
+                Explore the rich culinary traditions of Africa. From spicy stews to
+                flavorful desserts, each country offers a unique taste experience.
+            </p>
+        </div>
+        <div class="welcome-image">
+            <img src="{{ url_for('static', filename='img/african-food.png') }}" alt="African cuisine">
+        </div>
+    </section>
 
-    {% endblock %}
+    <!-- discover countries section -->
+    <section class="discover-section">
+        <h2>Discover countries</h2>
+        <div class="countries-preview">
+            {% for country in preview_countries %}
+                <a href="/country/{{ country }}" class="country-card">
+                    <img src="{{ url_for('static', filename='img/flags/' ~ country ~ '.png') }}" alt="{{ country.title() }} Flag">
+                    <div class="country-name">{{ country.title() }}</div>
+                </a>
+            {% endfor %}
+            <a href="{{ url_for('countries') }}" class="discover-btn"> Discover More</a>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
 </body>
 </html>

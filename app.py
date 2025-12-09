@@ -1,12 +1,12 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, render_template
 from data import country_data
-import random
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    preview_countries = list(country_data.keys())[:4]
+    return render_template("index.html", preview_countries=preview_countries)
 
 
 @app.route("/about/")
