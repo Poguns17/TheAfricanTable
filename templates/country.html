@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ country.title() }}}}</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ country.title() }}</h1>
+
+<p>{{ data.description }}</p>
+
+<h2>Recipes</h2>
+<ul>
+    {% for recipe in data.recipes %}
+        <li><a href="{{ recipe.url }}">{{ recipe.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<form action="/country/{{ country }}/random">
+    <button type="submit"> Random recipe</button>
+</form>
+
+<!-- quiz link -->
+
+
+{% endblock %}
+
+</body>
+</html>
