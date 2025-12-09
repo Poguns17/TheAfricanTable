@@ -34,6 +34,11 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+.title {
+    text-decoration: none;
+    display: flex;
+    color: #3d2500;
+}
 
 .logo img  {
     height: 55px;
@@ -108,6 +113,90 @@ main {
 
 .flash-success { background: #d4edda; }
 .flash-error { background: #f8d7da; }
+
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #3d2500;
+}
+
+/* vertical list container */
+.countries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual card */
+.country-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #fffdd0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;  /* full width of container */
+}
+.nigeria-card {
+    background-color: #008751;
+}
+.ghana-card {
+    background-color: #FFD700;
+}
+.senegal-card {
+    background-color: #006233;
+}
+.kenya-card {
+    background-color: #FF4B3E;
+}
+.ethiopia-card {
+    background-color: #0D662E;
+}
+.morocco-card {
+    background-color: #C1272D;
+}
+.egypt-card {
+    background-color: #F7941D;
+}
+.south_africa-card {
+    background-color: #007749;
+}
+.cameroon-card {
+    background-color: #007A5E;
+}
+.zimbabwe-card {
+    background-color: #007236;
+}
+
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.country-name {
+    text-align: center;
+}
+
+
+
+
+
+
 
 
 

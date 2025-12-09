@@ -1,7 +1,7 @@
 # data.py
 
 country_data = {
-    "Nigeria": {
+    "nigeria": {
         "name": "Nigeria",
         "description": "Nigeria is known for its vibrant flavours, iconic jollof, rich soups, and diverse food culture shaped by over 250 ethnic groups.",
         "recipes": [
@@ -26,7 +26,7 @@ country_data = {
         ]
     },
 
-    "Ghana": {
+    "ghana": {
         "name": "Ghana",
         "description": "Ghanaian cuisine is known for bold flavours, hearty stews, and comforting dishes often served with fufu or rice.",
         "recipes": [
@@ -51,7 +51,7 @@ country_data = {
         ]
     },
 
-    "Senegal": {
+    "senegal": {
         "name": "Senegal",
         "description": "Senegalese food blends coastal influences with bold spices, creating rich stews and fresh seafood dishes.",
         "recipes": [
@@ -76,7 +76,7 @@ country_data = {
         ]
     },
 
-    "Kenya": {
+    "kenya": {
         "name": "Kenya",
         "description": "Kenyan cuisine is warm, hearty, and influenced by coastal flavours, Maasai culture, and East African staples.",
         "recipes": [
@@ -101,7 +101,7 @@ country_data = {
         ]
     },
 
-    "Ethiopia": {
+    "ethiopia": {
         "name": "Ethiopia",
         "description": "Ethiopian cuisine is rich in spices, stews, and communal eating traditions centered around injera.",
         "recipes": [
@@ -126,7 +126,7 @@ country_data = {
         ]
     },
 
-    "Morocco": {
+    "morocco": {
         "name": "Morocco",
         "description": "Moroccan cuisine blends sweet and savoury elements with aromatic spices and colourful presentations.",
         "recipes": [
@@ -151,7 +151,7 @@ country_data = {
         ]
     },
 
-    "Egypt": {
+    "egypt": {
         "name": "Egypt",
         "description": "Egyptian food is hearty and ancient, with influences from North Africa and the Mediterranean.",
         "recipes": [
@@ -176,7 +176,7 @@ country_data = {
         ]
     },
 
-    "South_Africa": {
+    "south_africa": {
         "name": "South Africa",
         "description": "South African cuisine reflects its multicultural history, blending sweet, savoury, and spicy dishes.",
         "recipes": [
@@ -201,7 +201,7 @@ country_data = {
         ]
     },
 
-    "Cameroon": {
+    "cameroon": {
         "name": "Cameroon",
         "description": "Cameroonian food is diverse, rich, and influenced by the country’s rainforests and fertile agriculture.",
         "recipes": [
@@ -226,7 +226,7 @@ country_data = {
         ]
     },
 
-    "Zimbabwe": {
+    "zimbabwe": {
         "name": "Zimbabwe",
         "description": "Zimbabwean cuisine features hearty dishes and flavours influenced by local produce and traditional cooking.",
         "recipes": [
