@@ -1,253 +1,316 @@
-# data.py
-
 country_data = {
+
     "nigeria": {
-        "name": "Nigeria",
-        "description": "Nigeria is known for its vibrant flavours, iconic jollof, rich soups, and diverse food culture shaped by over 250 ethnic groups.",
-        "recipes": [
-            {
-                "name": "Jollof Rice",
-                "image": "img/nigeria/jollof.jpg",
-                "ingredients": ["Rice", "Tomato paste", "Bell peppers", "Onions", "Oil", "Stock cubes"],
-                "instructions": "Blend peppers, fry in oil, add tomato paste and spices, then cook rice in the sauce until fluffy."
-            },
-            {
-                "name": "Suya",
-                "image": "img/nigeria/suya.jpg",
-                "ingredients": ["Beef", "Ground peanuts", "Suya spice", "Salt", "Oil"],
-                "instructions": "Season sliced beef with suya spice, grill over open flames, and serve with onions."
-            },
-            {
-                "name": "Egusi Soup",
-                "image": "img/nigeria/egusi.jpg",
-                "ingredients": ["Melon seeds", "Spinach", "Palm oil", "Stock", "Meat", "Pepper mix"],
-                "instructions": "Fry egusi paste in palm oil, add meat and stock, then simmer with vegetables."
-            }
-        ]
+        "description": "Nigeria is known for its bold flavours, diverse stews, and iconic jollof rice.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Jollof Rice",
+                    "image": "jollof.png",
+                    "ingredients": ["Rice", "Tomatoes", "Bell pepper", "Onions", "Stock cube", "Oil"],
+                    "instructions": ["Heat the oil in a pan.", "Add the onions and sauté until golden.", "Add the rice and stir for 2 minutes.", "Pour in water and cook until done."
+    ]
+                },
+                {
+                    "name": "Egusi Soup",
+                    "image": "egusi.jpg",
+                    "ingredients": ["Egusi", "Palm oil", "Spinach", "Meat", "Stock"],
+                    "instructions": "Fry egusi mixture, add broth, meat, and vegetables; simmer until thick."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Fried Plantain",
+                    "image": "plantain.jpg",
+                    "ingredients": ["Ripe plantains", "Oil", "Salt"],
+                    "instructions": "Slice plantains and fry in hot oil until golden."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Chin Chin",
+                    "image": "chinchin.jpg",
+                    "ingredients": ["Flour", "Sugar", "Milk", "Butter", "Oil"],
+                    "instructions": "Mix dough, cut into pieces, and fry until crispy."
+                }
+            ]
+        }
     },
 
     "ghana": {
-        "name": "Ghana",
-        "description": "Ghanaian cuisine is known for bold flavours, hearty stews, and comforting dishes often served with fufu or rice.",
-        "recipes": [
-            {
-                "name": "Waakye",
-                "image": "img/ghana/waakye.jpg",
-                "ingredients": ["Rice", "Black-eyed peas", "Waakye leaves", "Salt"],
-                "instructions": "Cook rice and beans together with waakye leaves for colour and flavour."
-            },
-            {
-                "name": "Kontomire Stew",
-                "image": "img/ghana/kontomire.jpg",
-                "ingredients": ["Cocoyam leaves", "Palm oil", "Onions", "Fish", "Tomatoes"],
-                "instructions": "Simmer tomatoes and onions in palm oil, add fish and chopped kontomire leaves."
-            },
-            {
-                "name": "Ghana Jollof",
-                "image": "img/ghana/jollof.jpg",
-                "ingredients": ["Rice", "Tomato stew", "Spices", "Stock"],
-                "instructions": "Cook rice in a seasoned tomato sauce until rich and smoky."
-            }
-        ]
+        "description": "Ghanaian cuisine is hearty and flavour-rich, featuring stews, soups, and starches.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Waakye",
+                    "image": "waakye.jpg",
+                    "ingredients": ["Rice", "Black-eyed beans", "Waakye leaves"],
+                    "instructions": "Cook beans and rice together with waakye leaves for colour."
+                },
+                {
+                    "name": "Light Soup",
+                    "image": "light_soup.jpg",
+                    "ingredients": ["Tomatoes", "Pepper", "Fish or meat", "Onions"],
+                    "instructions": "Blend vegetables; simmer with meat and seasonings."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Kelewele",
+                    "image": "kelewele.jpg",
+                    "ingredients": ["Plantains", "Ginger", "Chili", "Oil"],
+                    "instructions": "Season diced plantain with spices and fry until crispy."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Atadwe Milk",
+                    "image": "atadwe_milk.jpg",
+                    "ingredients": ["Tiger nuts", "Sugar", "Water"],
+                    "instructions": "Blend soaked tiger nuts with water and sweeten lightly."
+                }
+            ]
+        }
     },
 
     "senegal": {
-        "name": "Senegal",
-        "description": "Senegalese food blends coastal influences with bold spices, creating rich stews and fresh seafood dishes.",
-        "recipes": [
-            {
-                "name": "Thieboudienne",
-                "image": "img/senegal/thieboudienne.jpg",
-                "ingredients": ["Fish", "Rice", "Tomato paste", "Carrots", "Cabbage"],
-                "instructions": "Simmer fish in tomato broth with vegetables, then cook rice in the same broth."
-            },
-            {
-                "name": "Yassa Chicken",
-                "image": "img/senegal/yassa.jpg",
-                "ingredients": ["Chicken", "Onions", "Mustard", "Lemon"],
-                "instructions": "Marinate chicken in lemon and mustard, grill, then cook in caramelised onions."
-            },
-            {
-                "name": "Sombi",
-                "image": "img/senegal/sombi.jpg",
-                "ingredients": ["Rice", "Coconut milk", "Sugar"],
-                "instructions": "Boil rice in coconut milk and sweeten for a creamy dessert."
-            }
-        ]
+        "description": "Senegalese cuisine blends coastal seafood flavours with rich spices and tomato bases.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Thieboudienne",
+                    "image": "thieb.jpg",
+                    "ingredients": ["Fish", "Rice", "Tomato paste", "Vegetables"],
+                    "instructions": "Cook fish in tomato stew; add rice and steam with vegetables."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Accara",
+                    "image": "accara.jpg",
+                    "ingredients": ["Black-eyed peas", "Onions", "Oil"],
+                    "instructions": "Blend soaked beans with onions and fry into fritters."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Sombi (Coconut Rice Pudding)",
+                    "image": "sombi.jpg",
+                    "ingredients": ["Rice", "Coconut milk", "Sugar"],
+                    "instructions": "Cook rice in coconut milk and sweeten gently."
+                }
+            ]
+        }
     },
 
     "kenya": {
-        "name": "Kenya",
-        "description": "Kenyan cuisine is warm, hearty, and influenced by coastal flavours, Maasai culture, and East African staples.",
-        "recipes": [
-            {
-                "name": "Ugali & Sukuma Wiki",
-                "image": "img/kenya/ugali.jpg",
-                "ingredients": ["Maize flour", "Water", "Collard greens", "Onions"],
-                "instructions": "Cook maize flour in boiling water until firm; sauté greens with onions on the side."
-            },
-            {
-                "name": "Nyama Choma",
-                "image": "img/kenya/nyama_choma.jpg",
-                "ingredients": ["Goat meat", "Salt", "Spices"],
-                "instructions": "Grill seasoned goat meat slowly over charcoal until smoky and tender."
-            },
-            {
-                "name": "Kenyan Pilau",
-                "image": "img/kenya/pilau.jpg",
-                "ingredients": ["Rice", "Pilau spice", "Beef", "Onions"],
-                "instructions": "Cook rice with beef and spices for a fragrant and savoury dish."
-            }
-        ]
+        "description": "Kenyan dishes range from coastal coconut stews to hearty highland classics.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Ugali and Sukuma Wiki",
+                    "image": "ugali.jpg",
+                    "ingredients": ["Maize flour", "Water", "Collard greens"],
+                    "instructions": "Cook maize flour into a stiff dough; sauté greens and serve together."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Chapati",
+                    "image": "chapati.jpg",
+                    "ingredients": ["Flour", "Oil", "Salt", "Water"],
+                    "instructions": "Knead dough, roll into circles, and fry on a hot pan."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Mahamri",
+                    "image": "mahamri.jpg",
+                    "ingredients": ["Flour", "Yeast", "Coconut milk", "Sugar"],
+                    "instructions": "Fry slightly sweet coconut dough until golden and puffy."
+                }
+            ]
+        }
     },
 
     "ethiopia": {
-        "name": "Ethiopia",
-        "description": "Ethiopian cuisine is rich in spices, stews, and communal eating traditions centered around injera.",
-        "recipes": [
-            {
-                "name": "Doro Wat",
-                "image": "img/ethiopia/doro_wat.jpg",
-                "ingredients": ["Chicken", "Berbere spice", "Onions", "Eggs"],
-                "instructions": "Simmer chicken in a rich onion and berbere sauce, add boiled eggs."
-            },
-            {
-                "name": "Injera",
-                "image": "img/ethiopia/injera.jpg",
-                "ingredients": ["Teff flour", "Water"],
-                "instructions": "Ferment teff batter for 2–3 days, then cook like a spongy flatbread."
-            },
-            {
-                "name": "Misir Wat",
-                "image": "img/ethiopia/misir_wat.jpg",
-                "ingredients": ["Lentils", "Berbere", "Tomatoes"],
-                "instructions": "Simmer lentils in berbere and tomato stew until thick and spicy."
-            }
-        ]
+        "description": "Ethiopian food features rich spices, slow-cooked stews, and the iconic injera bread.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Doro Wat",
+                    "image": "doro_wat.jpg",
+                    "ingredients": ["Chicken", "Berbere spice", "Onions", "Eggs"],
+                    "instructions": "Slow-cook onions and spices; add chicken and simmer until tender."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Injera",
+                    "image": "injera.jpg",
+                    "ingredients": ["Teff flour", "Water"],
+                    "instructions": "Ferment batter; cook on a flat pan to form spongy bread."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Himbasha",
+                    "image": "himbasha.jpg",
+                    "ingredients": ["Flour", "Sugar", "Cardamom", "Yeast"],
+                    "instructions": "Bake a soft, lightly sweetened flatbread flavoured with cardamom."
+                }
+            ]
+        }
     },
 
     "morocco": {
-        "name": "Morocco",
-        "description": "Moroccan cuisine blends sweet and savoury elements with aromatic spices and colourful presentations.",
-        "recipes": [
-            {
-                "name": "Chicken Tagine",
-                "image": "img/morocco/tagine.jpg",
-                "ingredients": ["Chicken", "Lemon", "Olives", "Spices"],
-                "instructions": "Slow-cook chicken with preserved lemon, olives, and spices in a tagine."
-            },
-            {
-                "name": "Couscous",
-                "image": "img/morocco/couscous.jpg",
-                "ingredients": ["Couscous", "Vegetables", "Broth"],
-                "instructions": "Steam couscous and serve with vegetables cooked in spiced broth."
-            },
-            {
-                "name": "Harira Soup",
-                "image": "img/morocco/harira.jpg",
-                "ingredients": ["Tomatoes", "Lentils", "Chickpeas"],
-                "instructions": "Cook tomatoes with lentils and chickpeas for a hearty soup."
-            }
-        ]
+        "description": "Moroccan food is aromatic and warm, featuring spices, couscous, and tagines.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Chicken Tagine",
+                    "image": "tagine.jpg",
+                    "ingredients": ["Chicken", "Preserved lemon", "Olives", "Spices"],
+                    "instructions": "Slow-cook chicken with spices in a tagine pot."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Couscous",
+                    "image": "couscous.jpg",
+                    "ingredients": ["Couscous", "Stock", "Vegetables"],
+                    "instructions": "Steam couscous over broth and fluff before serving."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Msemen with Honey",
+                    "image": "msemen.jpg",
+                    "ingredients": ["Flour", "Semolina", "Butter", "Honey"],
+                    "instructions": "Pan-fry layered flatbread and drizzle with honey."
+                }
+            ]
+        }
     },
 
     "egypt": {
-        "name": "Egypt",
-        "description": "Egyptian food is hearty and ancient, with influences from North Africa and the Mediterranean.",
-        "recipes": [
-            {
-                "name": "Koshari",
-                "image": "img/egypt/koshari.jpg",
-                "ingredients": ["Rice", "Lentils", "Pasta", "Tomato sauce"],
-                "instructions": "Layer rice, lentils, and pasta; top with spiced tomato sauce and crispy onions."
-            },
-            {
-                "name": "Ful Medames",
-                "image": "img/egypt/ful.jpg",
-                "ingredients": ["Fava beans", "Oil", "Lemon"],
-                "instructions": "Simmer beans and serve with oil, lemon, and bread."
-            },
-            {
-                "name": "Molokhia",
-                "image": "img/egypt/molokhia.jpg",
-                "ingredients": ["Molokhia leaves", "Garlic", "Broth"],
-                "instructions": "Cook minced molokhia leaves in broth and garlic for a silky stew."
-            }
-        ]
+        "description": "Egyptian cuisine combines ancient traditions with hearty, comforting meals.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Koshari",
+                    "image": "koshari.jpg",
+                    "ingredients": ["Lentils", "Rice", "Pasta", "Tomato sauce"],
+                    "instructions": "Layer rice, lentils, pasta, and top with spicy tomato sauce."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Ful Medames",
+                    "image": "ful.jpg",
+                    "ingredients": ["Fava beans", "Oil", "Lemon"],
+                    "instructions": "Simmer fava beans and serve with olive oil and lemon."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Basbousa",
+                    "image": "basbousa.jpg",
+                    "ingredients": ["Semolina", "Sugar", "Butter", "Syrup"],
+                    "instructions": "Bake semolina cake and soak in sweet syrup."
+                }
+            ]
+        }
     },
 
     "south_africa": {
-        "name": "South Africa",
-        "description": "South African cuisine reflects its multicultural history, blending sweet, savoury, and spicy dishes.",
-        "recipes": [
-            {
-                "name": "Bobotie",
-                "image": "img/south_africa/bobotie.jpg",
-                "ingredients": ["Minced meat", "Eggs", "Bread", "Spices"],
-                "instructions": "Bake minced meat with spiced custard topping."
-            },
-            {
-                "name": "Bunny Chow",
-                "image": "img/south_africa/bunny_chow.jpg",
-                "ingredients": ["Bread loaf", "Curry"],
-                "instructions": "Hollow a loaf of bread and fill with spicy curry."
-            },
-            {
-                "name": "Chakalaka",
-                "image": "img/south_africa/chakalaka.jpg",
-                "ingredients": ["Beans", "Peppers", "Spices"],
-                "instructions": "Cook beans with vegetables and spices for a tangy relish."
-            }
-        ]
+        "description": "South African food reflects diverse cultures with grills, stews, and vibrant flavours.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Bobotie",
+                    "image": "bobotie.jpg",
+                    "ingredients": ["Minced meat", "Spices", "Egg custard"],
+                    "instructions": "Bake seasoned minced meat topped with custard."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Chakalaka",
+                    "image": "chakalaka.jpg",
+                    "ingredients": ["Peppers", "Beans", "Carrots"],
+                    "instructions": "Cook vegetables with spices into a chunky relish."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Melktert",
+                    "image": "melktert.jpg",
+                    "ingredients": ["Milk", "Sugar", "Cinnamon", "Pastry"],
+                    "instructions": "Bake creamy milk tart with cinnamon topping."
+                }
+            ]
+        }
     },
 
     "cameroon": {
-        "name": "Cameroon",
-        "description": "Cameroonian food is diverse, rich, and influenced by the country’s rainforests and fertile agriculture.",
-        "recipes": [
-            {
-                "name": "Ndolé",
-                "image": "img/cameroon/ndole.jpg",
-                "ingredients": ["Bitterleaf", "Peanuts", "Beef"],
-                "instructions": "Cook bitterleaf with peanut paste and meat until rich."
-            },
-            {
-                "name": "Poulet DG",
-                "image": "img/cameroon/poulet_dg.jpg",
-                "ingredients": ["Chicken", "Plantains", "Carrots"],
-                "instructions": "Cook chicken and plantains together with vegetables for a sweet-savory dish."
-            },
-            {
-                "name": "Eru Soup",
-                "image": "img/cameroon/eru.jpg",
-                "ingredients": ["Eru leaves", "Beef", "Palm oil"],
-                "instructions": "Simmer eru leaves with meat in palm oil."
-            }
-        ]
+        "description": "Cameroonian cuisine balances rich tomato stews with grilled and spiced dishes.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Ndolé",
+                    "image": "ndole.jpg",
+                    "ingredients": ["Bitterleaf", "Peanuts", "Meat"],
+                    "instructions": "Cook bitterleaf with peanut paste and meat into a rich stew."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Puff Puff",
+                    "image": "puff_puff.jpg",
+                    "ingredients": ["Flour", "Sugar", "Yeast"],
+                    "instructions": "Fry sweet yeasted dough until golden."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Corn Fritters",
+                    "image": "corn_fritters.jpg",
+                    "ingredients": ["Corn", "Flour", "Oil"],
+                    "instructions": "Mix corn batter and fry until crispy."
+                }
+            ]
+        }
     },
 
     "zimbabwe": {
-        "name": "Zimbabwe",
-        "description": "Zimbabwean cuisine features hearty dishes and flavours influenced by local produce and traditional cooking.",
-        "recipes": [
-            {
-                "name": "Sadza",
-                "image": "img/zimbabwe/sadza.jpg",
-                "ingredients": ["Maize meal", "Water"],
-                "instructions": "Boil water, add maize meal, and stir until thick."
-            },
-            {
-                "name": "Beef Stew",
-                "image": "img/zimbabwe/beef_stew.jpg",
-                "ingredients": ["Beef", "Tomatoes", "Onions", "Garlic"],
-                "instructions": "Cook beef with vegetables for a rich stew."
-            },
-            {
-                "name": "Muriwo Unedovi",
-                "image": "img/zimbabwe/muriwo.jpg",
-                "ingredients": ["Leafy greens", "Peanut butter"],
-                "instructions": "Simmer greens with peanut butter until creamy."
-            }
-        ]
+        "description": "Zimbabwean food features earthy flavours, stews, and maize-based staples.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Sadza",
+                    "image": "sadza.jpg",
+                    "ingredients": ["Maize meal", "Water"],
+                    "instructions": "Cook maize meal into a firm porridge."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Muriwo Unedovi",
+                    "image": "muriwo.jpg",
+                    "ingredients": ["Greens", "Peanut butter"],
+                    "instructions": "Cook greens and mix with peanut butter sauce."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Mapopo Candy (Papaya Strips)",
+                    "image": "mapopo.jpg",
+                    "ingredients": ["Papaya", "Sugar"],
+                    "instructions": "Cook papaya strips in sugar syrup until chewy."
+                }
+            ]
+        }
     }
+
 }

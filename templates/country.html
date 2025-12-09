@@ -8,23 +8,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ country.title() }}</h1>
+<div class="country-container">
 
-<p>{{ data.description }}</p>
+<h1 class="country-header">{{ country.title() }}</h1>
 
-<h2>Recipes</h2>
-<ul>
-    {% for recipe in data.recipes %}
-        <li><a href="{{ recipe.url }}">{{ recipe.name }}</a></li>
-    {% endfor %}
-</ul>
+<p class="country-description">{{ data.description }}</p>
+
+<h2 class="header">Recipes</h2>
+{% for category, recipe_list in recipes.items() %}
+    <h2 class="category-title">{{ category }}</h2>
+
+    <div class="recipe-grid">
+        {% for recipe in recipe_list %}
+            <a href="{{ url_for('recipe_page', country=country, recipe_name=recipe.name) }}" class="recipe-card">
+                <img src="{{ url_for('static', filename='img/recipes/' + recipe.image) }}" alt="{{ recipe.name }}">
+                <div class="recipe-info">
+                    <h3>{{ recipe.name }}</h3>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endfor %}
+
 
 <form action="/country/{{ country }}/random">
     <button type="submit"> Random recipe</button>
 </form>
 
-<!-- quiz link -->
-
+</div>
+</div>
 
 {% endblock %}
 
