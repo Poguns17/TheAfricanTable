@@ -190,7 +190,7 @@ main {
 
 .countries-preview {
     display: flex;
-    gap: 20px;
+    gap: 35px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -199,12 +199,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: black;
     border-radius: 20px;
     padding: 15px;
     width: 150px;
     text-decoration: none;
-    color: #2c3e50;
+    color: #white;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
