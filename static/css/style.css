@@ -226,6 +226,47 @@ main {
 }
 
 
+/* ------------------Home Page Randomizer----------------- */
+.home-randomizer {
+    display: block;
+    flex-direction: column;
+    margin: 50px 0;
+    margin-top: 90px;
+    gap: 20px;
+}
+
+.home-randomizer h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-randomizer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 12px 30px;
+    background-color: #008B5F;
+    color: #2F2F2F;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    height: 70px;
+    width: 500px;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-randomizer:hover {
+    background-color: #2D6A4F;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
 
 
 
@@ -627,13 +668,6 @@ h1 {
 
 
 
-
-
-
-
-
-
-
 /* RECIPE PAGE */
 .recipe-container {
     width: 70%;
@@ -699,6 +733,87 @@ h1 {
 .back-btn:hover {
     background-color: #A01F24;
 }
+
+
+
+/* ---------------Randomiser page---------------------------------------*/
+/* --- Randomizer Page --- */
+.randomizer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 80vh; /* vertically center */
+    background-color: #2F2F2F; /* optional light beige background */
+    font-family: 'Arial', sans-serif;
+}
+
+.randomizer-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #C1272D; /* match your theme */
+}
+
+.randomizer-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #FAF0CA;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.randomizer-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #EFCB68;
+}
+
+.randomizer-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.randomizer-container select {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.randomizer-container button {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: #C1272D;
+    color: #F5F5DC;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.randomizer-container button:hover {
+    background-color: #A01F24;
+}
+
+#category-select {
+    width: 100%;
+}
+
+/* optional: hide category by default, show only when recipe selected */
+#category-select {
+    display: none;
+}
+
 
 
 

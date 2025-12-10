@@ -6,22 +6,26 @@ app = Flask(__name__)
 app.secret_key = "table"
 
 
+# home page
 @app.route("/")
 def home():
     preview_countries = list(country_data.keys())[:5]
     return render_template("index.html", preview_countries=preview_countries)
 
 
+# about page
 @app.route("/about/")
 def about():
     return render_template("about.html")
 
 
+# countries list page
 @app.route("/countries/")
 def countries():
     return render_template("countries.html", countries=list(country_data.keys()))
 
 
+# countries
 @app.route("/country/<country>")
 def country_page(country):
     country_info = country_data.get(country.lower())
@@ -41,6 +45,7 @@ def country_page(country):
     )
 
 
+# get random recipe on country page
 @app.route("/country/<country>/random")
 def random_recipe_from_country(country):
     country_info = country_data.get(country.lower())
@@ -59,6 +64,7 @@ def random_recipe_from_country(country):
     return redirect(url_for("recipe_page", country=country, recipe_name=chosen_recipe["name"]))
 
 
+# recipes
 @app.route("/country/<country>/recipe/<recipe_name>")
 def recipe_page(country, recipe_name):
     country_info = country_data.get(country.lower())
@@ -89,6 +95,7 @@ def prepare_quiz_questions(country_key):
     return questions
 
 
+# country quiz on the country page
 @app.route("/country/<country>/quiz", methods=["GET", "POST"])
 def country_quiz(country):
     key = country.lower()
@@ -163,3 +170,51 @@ def country_quiz(country):
     current_q = state["questions"][idx]
     qnum = idx + 1
     return render_template("quiz.html", country=country, question=current_q, qnum=qnum, total=total)
+
+
+# randomiser page
+@app.route("/randomizer", methods=["GET", "POST"])
+def randomizer():
+    category_options = set()
+    # Collect all categories from all countries for the form dropdown
+    for country_info in country_data.values():
+        for cat in country_info.get("recipes", {}).keys():
+            category_options.add(cat)
+    category_options = sorted(category_options)
+
+    selected_category = None
+    result = None
+
+    if request.method == "POST":
+        choice_type = request.form.get("choice_type")
+        selected_category = request.form.get("category")
+
+        if choice_type == "country":
+            # Randomly pick a country
+            result = random.choice(list(country_data.keys()))
+            # Redirect to that country's page
+            return redirect(url_for("country_page", country=result))
+
+        elif choice_type == "recipe":
+            # Filter recipes by selected category
+            filtered_recipes = []
+            for country, info in country_data.items():
+                recipes = info.get("recipes", {})
+                if selected_category in recipes:
+                    for recipe in recipes[selected_category]:
+                        # Include country for redirect later
+                        recipe_copy = recipe.copy()
+                        recipe_copy["country"] = country
+                        filtered_recipes.append(recipe_copy)
+
+            if not filtered_recipes:
+                flash(f"No recipes found in category '{selected_category}'")
+                return redirect(url_for("randomizer"))
+
+            # Pick random recipe
+            chosen_recipe = random.choice(filtered_recipes)
+            recipe_slug = chosen_recipe["name"].lower().replace(" ", "-")
+            return redirect(url_for("recipe_page", country=chosen_recipe["country"], recipe_name=recipe_slug))
+
+    return render_template(
+        "randomiser.html", category_options=category_options, selected_category=selected_category)

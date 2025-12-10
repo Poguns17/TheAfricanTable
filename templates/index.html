@@ -38,8 +38,16 @@
             <a href="{{ url_for('countries') }}" class="discover-btn"> Discover More</a>
         </div>
     </section>
+
+    <div class="home-randomizer">
+        <h2>Want to take an unexpected journey and discover something new?</h2>
+        <a href="{{ url_for('randomizer') }}" class="btn-randomizer">🎲 Randomize</a>
+    </div>
 </div>
 
 {% endblock %}
+
+<script src="static/js/app.js"></script>
+
 </body>
 </html>
