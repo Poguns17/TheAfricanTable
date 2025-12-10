@@ -1,253 +1,395 @@
-# data.py
-
 country_data = {
+
     "nigeria": {
-        "name": "Nigeria",
-        "description": "Nigeria is known for its vibrant flavours, iconic jollof, rich soups, and diverse food culture shaped by over 250 ethnic groups.",
-        "recipes": [
-            {
-                "name": "Jollof Rice",
-                "image": "img/nigeria/jollof.jpg",
-                "ingredients": ["Rice", "Tomato paste", "Bell peppers", "Onions", "Oil", "Stock cubes"],
-                "instructions": "Blend peppers, fry in oil, add tomato paste and spices, then cook rice in the sauce until fluffy."
-            },
-            {
-                "name": "Suya",
-                "image": "img/nigeria/suya.jpg",
-                "ingredients": ["Beef", "Ground peanuts", "Suya spice", "Salt", "Oil"],
-                "instructions": "Season sliced beef with suya spice, grill over open flames, and serve with onions."
-            },
-            {
-                "name": "Egusi Soup",
-                "image": "img/nigeria/egusi.jpg",
-                "ingredients": ["Melon seeds", "Spinach", "Palm oil", "Stock", "Meat", "Pepper mix"],
-                "instructions": "Fry egusi paste in palm oil, add meat and stock, then simmer with vegetables."
-            }
-        ]
+        "description": "A West African nation known for jollof rice, diverse regional stews (egusi, ogbono), and street foods such as suya.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Jollof Rice",
+                    "image": "jollof.png",
+                    "ingredients": ["Rice", "Tomatoes", "Bell pepper", "Onions", "Stock cube", "Oil"],
+                    "instructions": ["Heat the oil in a pan.", "Add the onions and sauté until golden.", "Add the rice and stir for 2 minutes.", "Pour in water and cook until done."]
+                },
+                {
+                    "name": "Egusi Soup",
+                    "image": "egusi.jpg",
+                    "ingredients": ["Egusi", "Palm oil", "Spinach", "Meat", "Stock"],
+                    "instructions": ["Fry egusi mixture, add broth, meat, and vegetables; simmer until thick."]
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Fried Plantain",
+                    "image": "plantain.jpg",
+                    "ingredients": ["Ripe plantains", "Oil", "Salt"],
+                    "instructions": "Slice plantains and fry in hot oil until golden."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Chin Chin",
+                    "image": "chinchin.jpg",
+                    "ingredients": ["Flour", "Sugar", "Milk", "Butter", "Oil"],
+                    "instructions": "Mix dough, cut into pieces, and fry until crispy."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Which spice/ingredient gives Jollof Rice much of its colour and flavour?","options":["Turmeric","Tomato","Saffron","Curry powder"],"answer":"Tomato"},
+                {"type":"mcq","question":"Suya is traditionally served with which accompaniment?","options":["Grated coconut","Onions and slices of tomato","Boiled yams","Plantain chips"],"answer":"Onions and slices of tomato"},
+                {"type":"mcq","question":"Egusi soup is primarily made from which ingredient?","options":["Ground melon seeds","Peanut butter","Cassava flour","Coconut milk"],"answer":"Ground melon seeds"},
+                {"type":"tf","question":"Pounded yam is commonly eaten with Nigerian soups such as egusi. (True/False)","answer":True},
+                {"type":"tf","question":"Nigeria’s cuisine is uniform across the country with no regional variations. (True/False)","answer":False},
+                {"type":"tf","question":"Suya originated as a roadside skewered meat snack. (True/False)","answer":True}
+            ]
     },
 
     "ghana": {
-        "name": "Ghana",
-        "description": "Ghanaian cuisine is known for bold flavours, hearty stews, and comforting dishes often served with fufu or rice.",
-        "recipes": [
-            {
-                "name": "Waakye",
-                "image": "img/ghana/waakye.jpg",
-                "ingredients": ["Rice", "Black-eyed peas", "Waakye leaves", "Salt"],
-                "instructions": "Cook rice and beans together with waakye leaves for colour and flavour."
-            },
-            {
-                "name": "Kontomire Stew",
-                "image": "img/ghana/kontomire.jpg",
-                "ingredients": ["Cocoyam leaves", "Palm oil", "Onions", "Fish", "Tomatoes"],
-                "instructions": "Simmer tomatoes and onions in palm oil, add fish and chopped kontomire leaves."
-            },
-            {
-                "name": "Ghana Jollof",
-                "image": "img/ghana/jollof.jpg",
-                "ingredients": ["Rice", "Tomato stew", "Spices", "Stock"],
-                "instructions": "Cook rice in a seasoned tomato sauce until rich and smoky."
-            }
-        ]
+        "description": ".Ghanaian cuisine features hearty stews and staples like fufu and waakye; street snacks include kelewele (spicy fried plantain).",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Waakye",
+                    "image": "waakye.jpg",
+                    "ingredients": ["Rice", "Black-eyed beans", "Waakye leaves"],
+                    "instructions": "Cook beans and rice together with waakye leaves for colour."
+                },
+                {
+                    "name": "Light Soup",
+                    "image": "light_soup.jpg",
+                    "ingredients": ["Tomatoes", "Pepper", "Fish or meat", "Onions"],
+                    "instructions": "Blend vegetables; simmer with meat and seasonings."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Kelewele",
+                    "image": "kelewele.jpg",
+                    "ingredients": ["Plantains", "Ginger", "Chili", "Oil"],
+                    "instructions": "Season diced plantain with spices and fry until crispy."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Atadwe Milk",
+                    "image": "atadwe_milk.jpg",
+                    "ingredients": ["Tiger nuts", "Sugar", "Water"],
+                    "instructions": "Blend soaked tiger nuts with water and sweeten lightly."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Waakye is commonly cooked with which ingredient to give it colour and flavour?","options":["Banana leaves","Bay leaves","Waakye (dried sorghum) leaves/beans water","Tea leaves"],"answer":"Waakye (dried sorghum) leaves/beans water"},
+                {"type":"mcq","question":"Kelewele is best described as:","options":["A spicy fried plantain snack","A fermented porridge","A coconut milk pudding","A meat stew"],"answer":"A spicy fried plantain snack"},
+                {"type":"mcq","question":"Ghanaian 'Light Soup' often accompanies which starchy side?","options":["Fufu","Risotto","Chapati","Naan"],"answer":"Fufu"},
+                {"type":"tf","question":"Kelewele is typically seasoned with ginger and chili. (True/False)","answer":True},
+                {"type":"tf","question":"Ghanaian cuisine makes no use of palm oil. (True/False)","answer":False},
+                {"type":"tf","question":"Waakye can be served with fried plantain and gari. (True/False)","answer":True}
+            ]
     },
 
     "senegal": {
-        "name": "Senegal",
-        "description": "Senegalese food blends coastal influences with bold spices, creating rich stews and fresh seafood dishes.",
-        "recipes": [
-            {
-                "name": "Thieboudienne",
-                "image": "img/senegal/thieboudienne.jpg",
-                "ingredients": ["Fish", "Rice", "Tomato paste", "Carrots", "Cabbage"],
-                "instructions": "Simmer fish in tomato broth with vegetables, then cook rice in the same broth."
-            },
-            {
-                "name": "Yassa Chicken",
-                "image": "img/senegal/yassa.jpg",
-                "ingredients": ["Chicken", "Onions", "Mustard", "Lemon"],
-                "instructions": "Marinate chicken in lemon and mustard, grill, then cook in caramelised onions."
-            },
-            {
-                "name": "Sombi",
-                "image": "img/senegal/sombi.jpg",
-                "ingredients": ["Rice", "Coconut milk", "Sugar"],
-                "instructions": "Boil rice in coconut milk and sweeten for a creamy dessert."
-            }
-        ]
+        "description": "Senegalese cuisine blends coastal seafood flavours with rich spices and tomato bases; Thieboudienne (fish and rice) is a national classic.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Thieboudienne",
+                    "image": "thieb.jpg",
+                    "ingredients": ["Fish", "Rice", "Tomato paste", "Vegetables"],
+                    "instructions": "Cook fish in tomato stew; add rice and steam with vegetables."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Accara",
+                    "image": "accara.jpg",
+                    "ingredients": ["Black-eyed peas", "Onions", "Oil"],
+                    "instructions": "Blend soaked beans with onions and fry into fritters."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Sombi (Coconut Rice Pudding)",
+                    "image": "sombi.jpg",
+                    "ingredients": ["Rice", "Coconut milk", "Sugar"],
+                    "instructions": "Cook rice in coconut milk and sweeten gently."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Thieboudienne is primarily a dish of:","options":["Lamb and couscous","Fish, rice and vegetables","Fried plantain and beans","Grilled chicken and yams"],"answer":"Fish, rice and vegetables"},
+                {"type":"mcq","question":"Yassa is a Senegalese dish known for heavy use of which ingredient?","options":["Lemon (citrus)","Coconut milk","Peanut butter","Sour cream"],"answer":"Lemon (citrus)"},
+                {"type":"mcq","question":"Accara are similar to which of the following?","options":["Fritters made from black-eyed peas","Steamed rice cakes","Baked custards","Fresh salads"],"answer":"Fritters made from black-eyed peas"},
+                {"type":"tf","question":"Senegal is a coastal country so seafood features heavily in its cuisine. (True/False)","answer":True},
+                {"type":"tf","question":"Thieboudienne normally includes vegetables cooked with the fish broth. (True/False)","answer":True},
+                {"type":"tf","question":"Senegalese cooking rarely uses tomatoes. (True/False)","answer":False}
+            ]
     },
 
     "kenya": {
-        "name": "Kenya",
-        "description": "Kenyan cuisine is warm, hearty, and influenced by coastal flavours, Maasai culture, and East African staples.",
-        "recipes": [
-            {
-                "name": "Ugali & Sukuma Wiki",
-                "image": "img/kenya/ugali.jpg",
-                "ingredients": ["Maize flour", "Water", "Collard greens", "Onions"],
-                "instructions": "Cook maize flour in boiling water until firm; sauté greens with onions on the side."
-            },
-            {
-                "name": "Nyama Choma",
-                "image": "img/kenya/nyama_choma.jpg",
-                "ingredients": ["Goat meat", "Salt", "Spices"],
-                "instructions": "Grill seasoned goat meat slowly over charcoal until smoky and tender."
-            },
-            {
-                "name": "Kenyan Pilau",
-                "image": "img/kenya/pilau.jpg",
-                "ingredients": ["Rice", "Pilau spice", "Beef", "Onions"],
-                "instructions": "Cook rice with beef and spices for a fragrant and savoury dish."
-            }
-        ]
+        "description": "Kenyan food includes staples such as ugali and sukuma wiki, grilled meats like nyama choma, and coastal pilau influenced by Arab spices.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Ugali and Sukuma Wiki",
+                    "image": "ugali.jpg",
+                    "ingredients": ["Maize flour", "Water", "Collard greens"],
+                    "instructions": "Cook maize flour into a stiff dough; sauté greens and serve together."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Chapati",
+                    "image": "chapati.jpg",
+                    "ingredients": ["Flour", "Oil", "Salt", "Water"],
+                    "instructions": "Knead dough, roll into circles, and fry on a hot pan."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Mahamri",
+                    "image": "mahamri.jpg",
+                    "ingredients": ["Flour", "Yeast", "Coconut milk", "Sugar"],
+                    "instructions": "Fry slightly sweet coconut dough until golden and puffy."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Ugali is primarily made from which ingredient?","options":["Cassava","Rice","Maize (corn) flour","Wheat flour"],"answer":"Maize (corn) flour"},
+                {"type":"mcq","question":"Nyama choma is best described as:","options":["A sweet dessert","Grilled/roasted meat","A fish stew","A coconut rice"],"answer":"Grilled/roasted meat"},
+                {"type":"mcq","question":"Pilau in Kenya often uses which spice blend?","options":["Berbere","Garam masala","Pilau spice (cardamom, cumin, cloves)","Ras el hanout"],"answer":"Pilau spice (cardamom, cumin, cloves)"},
+                {"type":"tf","question":"Chapati is a flatbread commonly eaten in Kenya. (True/False)","answer":True},
+                {"type":"tf","question":"Nyama choma is usually served alone without any side dishes. (True/False)","answer":False},
+                {"type":"tf","question":"Ugali has a stiff, dough-like texture when cooked correctly. (True/False)","answer":True}
+            ]
     },
 
     "ethiopia": {
-        "name": "Ethiopia",
-        "description": "Ethiopian cuisine is rich in spices, stews, and communal eating traditions centered around injera.",
-        "recipes": [
-            {
-                "name": "Doro Wat",
-                "image": "img/ethiopia/doro_wat.jpg",
-                "ingredients": ["Chicken", "Berbere spice", "Onions", "Eggs"],
-                "instructions": "Simmer chicken in a rich onion and berbere sauce, add boiled eggs."
-            },
-            {
-                "name": "Injera",
-                "image": "img/ethiopia/injera.jpg",
-                "ingredients": ["Teff flour", "Water"],
-                "instructions": "Ferment teff batter for 2–3 days, then cook like a spongy flatbread."
-            },
-            {
-                "name": "Misir Wat",
-                "image": "img/ethiopia/misir_wat.jpg",
-                "ingredients": ["Lentils", "Berbere", "Tomatoes"],
-                "instructions": "Simmer lentils in berbere and tomato stew until thick and spicy."
-            }
-        ]
+        "description": "Ethiopian cuisine is notable for injera (fermented flatbread) and spicy stews (wats) such as doro wat, often eaten communally.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Doro Wat",
+                    "image": "doro_wat.jpg",
+                    "ingredients": ["Chicken", "Berbere spice", "Onions", "Eggs"],
+                    "instructions": "Slow-cook onions and spices; add chicken and simmer until tender."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Injera",
+                    "image": "injera.jpg",
+                    "ingredients": ["Teff flour", "Water"],
+                    "instructions": "Ferment batter; cook on a flat pan to form spongy bread."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Himbasha",
+                    "image": "himbasha.jpg",
+                    "ingredients": ["Flour", "Sugar", "Cardamom", "Yeast"],
+                    "instructions": "Bake a soft, lightly sweetened flatbread flavoured with cardamom."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Injera is typically made from which flour?","options":["Wheat","Teff","Rice","Maize"],"answer":"Teff"},
+                {"type":"mcq","question":"Doro wat is primarily a:","options":["Vegetable salad","Chicken stew","Pasta dish","Seafood rice"],"answer":"Chicken stew"},
+                {"type":"mcq","question":"Berbere is:","options":["A type of flatbread","A spice mix","A cooking pot","A fermented drink"],"answer":"A spice mix"},
+                {"type":"tf","question":"Ethiopian meals are often served on a single communal platter. (True/False)","answer":True},
+                {"type":"tf","question":"Injera is eaten with the hands and used as a utensil. (True/False)","answer":True},
+                {"type":"tf","question":"Ethiopian cuisine uses minimal spices. (True/False)","answer":False}
+            ]
     },
 
     "morocco": {
-        "name": "Morocco",
-        "description": "Moroccan cuisine blends sweet and savoury elements with aromatic spices and colourful presentations.",
-        "recipes": [
-            {
-                "name": "Chicken Tagine",
-                "image": "img/morocco/tagine.jpg",
-                "ingredients": ["Chicken", "Lemon", "Olives", "Spices"],
-                "instructions": "Slow-cook chicken with preserved lemon, olives, and spices in a tagine."
-            },
-            {
-                "name": "Couscous",
-                "image": "img/morocco/couscous.jpg",
-                "ingredients": ["Couscous", "Vegetables", "Broth"],
-                "instructions": "Steam couscous and serve with vegetables cooked in spiced broth."
-            },
-            {
-                "name": "Harira Soup",
-                "image": "img/morocco/harira.jpg",
-                "ingredients": ["Tomatoes", "Lentils", "Chickpeas"],
-                "instructions": "Cook tomatoes with lentils and chickpeas for a hearty soup."
-            }
-        ]
+        "description": "Moroccan food blends sweet and savoury flavours—tagines, couscous, and pastries—using spices like cinnamon, cumin and preserved lemon.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Chicken Tagine",
+                    "image": "tagine.jpg",
+                    "ingredients": ["Chicken", "Preserved lemon", "Olives", "Spices"],
+                    "instructions": "Slow-cook chicken with spices in a tagine pot."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Couscous",
+                    "image": "couscous.jpg",
+                    "ingredients": ["Couscous", "Stock", "Vegetables"],
+                    "instructions": "Steam couscous over broth and fluff before serving."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Msemen with Honey",
+                    "image": "msemen.jpg",
+                    "ingredients": ["Flour", "Semolina", "Butter", "Honey"],
+                    "instructions": "Pan-fry layered flatbread and drizzle with honey."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"A tagine is:","options":["A cooking vessel and the stew cooked in it","A type of flatbread","A sweet pastry","A spice mix"],"answer":"A cooking vessel and the stew cooked in it"},
+                {"type":"mcq","question":"Which ingredient is commonly paired with meat in Moroccan sweet-savory dishes?","options":["Chocolate","Preserved lemon","Soy sauce","Maple syrup"],"answer":"Preserved lemon"},
+                {"type":"mcq","question":"Couscous is traditionally made from:","options":["Wheat semolina","Rice flour","Cornmeal","Lentil flour"],"answer":"Wheat semolina"},
+                {"type":"tf","question":"Moroccan cuisine often blends fruits or dried fruit with meat. (True/False)","answer":True},
+                {"type":"tf","question":"Tagine dishes are always very spicy hot. (True/False)","answer":False},
+                {"type":"tf","question":"Couscous is usually steamed rather than boiled. (True/False)","answer":True}
+            ]
     },
 
     "egypt": {
-        "name": "Egypt",
-        "description": "Egyptian food is hearty and ancient, with influences from North Africa and the Mediterranean.",
-        "recipes": [
-            {
-                "name": "Koshari",
-                "image": "img/egypt/koshari.jpg",
-                "ingredients": ["Rice", "Lentils", "Pasta", "Tomato sauce"],
-                "instructions": "Layer rice, lentils, and pasta; top with spiced tomato sauce and crispy onions."
-            },
-            {
-                "name": "Ful Medames",
-                "image": "img/egypt/ful.jpg",
-                "ingredients": ["Fava beans", "Oil", "Lemon"],
-                "instructions": "Simmer beans and serve with oil, lemon, and bread."
-            },
-            {
-                "name": "Molokhia",
-                "image": "img/egypt/molokhia.jpg",
-                "ingredients": ["Molokhia leaves", "Garlic", "Broth"],
-                "instructions": "Cook minced molokhia leaves in broth and garlic for a silky stew."
-            }
-        ]
+        "description": "Egyptian cuisine features dishes such as koshari, ful medames and molokhia, reflecting Nile-based agriculture and Levantine influences.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Koshari",
+                    "image": "koshari.jpg",
+                    "ingredients": ["Lentils", "Rice", "Pasta", "Tomato sauce"],
+                    "instructions": "Layer rice, lentils, pasta, and top with spicy tomato sauce."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Ful Medames",
+                    "image": "ful.jpg",
+                    "ingredients": ["Fava beans", "Oil", "Lemon"],
+                    "instructions": "Simmer fava beans and serve with olive oil and lemon."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Basbousa",
+                    "image": "basbousa.jpg",
+                    "ingredients": ["Semolina", "Sugar", "Butter", "Syrup"],
+                    "instructions": "Bake semolina cake and soak in sweet syrup."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Koshari is a layered dish that commonly includes which of the following?","options":["Rice, lentils and pasta","Fish and couscous","Steamed vegetables","Grilled meat only"],"answer":"Rice, lentils and pasta"},
+                {"type":"mcq","question":"Ful medames is made primarily from:","options":["Fava beans","Chickpeas","Cowpeas","Lentils"],"answer":"Fava beans"},
+                {"type":"mcq","question":"Molokhia is best described as:","options":["A sweet pastry","A leafy green stew/soup","A type of bread","A rice pudding"],"answer":"A leafy green stew/soup"},
+                {"type":"tf","question":"Koshari originated as a street food and comfort dish. (True/False)","answer":True},
+                {"type":"tf","question":"Ful medames is typically eaten for breakfast in Egypt. (True/False)","answer":True},
+                {"type":"tf","question":"Egyptian cuisine has no Mediterranean influences. (True/False)","answer":False}
+            ]
     },
 
     "south_africa": {
-        "name": "South Africa",
-        "description": "South African cuisine reflects its multicultural history, blending sweet, savoury, and spicy dishes.",
-        "recipes": [
-            {
-                "name": "Bobotie",
-                "image": "img/south_africa/bobotie.jpg",
-                "ingredients": ["Minced meat", "Eggs", "Bread", "Spices"],
-                "instructions": "Bake minced meat with spiced custard topping."
-            },
-            {
-                "name": "Bunny Chow",
-                "image": "img/south_africa/bunny_chow.jpg",
-                "ingredients": ["Bread loaf", "Curry"],
-                "instructions": "Hollow a loaf of bread and fill with spicy curry."
-            },
-            {
-                "name": "Chakalaka",
-                "image": "img/south_africa/chakalaka.jpg",
-                "ingredients": ["Beans", "Peppers", "Spices"],
-                "instructions": "Cook beans with vegetables and spices for a tangy relish."
-            }
-        ]
+        "description": "South African cuisine is multicultural (e.g., braai/BBQ, bobotie, bunny chow), reflecting African, Dutch, Indian and Malay influences.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Bobotie",
+                    "image": "bobotie.jpg",
+                    "ingredients": ["Minced meat", "Spices", "Egg custard"],
+                    "instructions": "Bake seasoned minced meat topped with custard."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Chakalaka",
+                    "image": "chakalaka.jpg",
+                    "ingredients": ["Peppers", "Beans", "Carrots"],
+                    "instructions": "Cook vegetables with spices into a chunky relish."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Melktert",
+                    "image": "melktert.jpg",
+                    "ingredients": ["Milk", "Sugar", "Cinnamon", "Pastry"],
+                    "instructions": "Bake creamy milk tart with cinnamon topping."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"What does 'braai' refer to in South Africa?","options":["A type of dessert","A barbecue/grill","A spicy stew","A breakfast porridge"],"answer":"A barbecue/grill"},
+                {"type":"mcq","question":"Bunny chow originally comes from which community?","options":["Indian community in Durban","Dutch settlers","Zulu tradition","Portuguese traders"],"answer":"Indian community in Durban"},
+                {"type":"mcq","question":"Bobotie is a dish that typically includes:","options":["Minced meat with spiced custard topping","Raw fish","Stuffed vegetables only","A rice pudding"],"answer":"Minced meat with spiced custard topping"},
+                {"type":"tf","question":"Chakalaka is a vegetable relish often served at braais. (True/False)","answer":True},
+                {"type":"tf","question":"Bunny chow is a bread loaf filled with curry. (True/False)","answer":True},
+                {"type":"tf","question":"South African cuisine is homogeneous across the country. (True/False)","answer":False}
+            ]
     },
 
     "cameroon": {
-        "name": "Cameroon",
-        "description": "Cameroonian food is diverse, rich, and influenced by the country’s rainforests and fertile agriculture.",
-        "recipes": [
-            {
-                "name": "Ndolé",
-                "image": "img/cameroon/ndole.jpg",
-                "ingredients": ["Bitterleaf", "Peanuts", "Beef"],
-                "instructions": "Cook bitterleaf with peanut paste and meat until rich."
-            },
-            {
-                "name": "Poulet DG",
-                "image": "img/cameroon/poulet_dg.jpg",
-                "ingredients": ["Chicken", "Plantains", "Carrots"],
-                "instructions": "Cook chicken and plantains together with vegetables for a sweet-savory dish."
-            },
-            {
-                "name": "Eru Soup",
-                "image": "img/cameroon/eru.jpg",
-                "ingredients": ["Eru leaves", "Beef", "Palm oil"],
-                "instructions": "Simmer eru leaves with meat in palm oil."
-            }
-        ]
+        "description": "Cameroonian cuisine combines rainforest and coastal ingredients—ndolé, poulet DG and spicy stews are regional favourites.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Ndolé",
+                    "image": "ndole.jpg",
+                    "ingredients": ["Bitterleaf", "Peanuts", "Meat"],
+                    "instructions": "Cook bitterleaf with peanut paste and meat into a rich stew."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Puff Puff",
+                    "image": "puff_puff.jpg",
+                    "ingredients": ["Flour", "Sugar", "Yeast"],
+                    "instructions": "Fry sweet yeasted dough until golden."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Corn Fritters",
+                    "image": "corn_fritters.jpg",
+                    "ingredients": ["Corn", "Flour", "Oil"],
+                    "instructions": "Mix corn batter and fry until crispy."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Ndolé is primarily made from which leafy ingredient?","options":["Bitterleaf or ndolé leaves","Spinach only","Kale","Lettuce"],"answer":"Bitterleaf or ndolé leaves"},
+                {"type":"mcq","question":"Poulet DG commonly pairs chicken with which side?","options":["Plantains and vegetables","Sushi rice","Pasta","Pancakes"],"answer":"Plantains and vegetables"},
+                {"type":"mcq","question":"Cameroon includes cuisines influenced by which of these?","options":["Rainforest, coastal and savanna regions","Only Mediterranean cuisine","Only French dessert traditions","Only Japanese influences"],"answer":"Rainforest, coastal and savanna regions"},
+                {"type":"tf","question":"Ndolé often includes peanuts or peanut paste. (True/False)","answer":True},
+                {"type":"tf","question":"Cameroon is landlocked with no coastal culinary influences. (True/False)","answer":False},
+                {"type":"tf","question":"Poulet DG is a celebratory dish often served at gatherings. (True/False)","answer":True}
+            ]
     },
 
     "zimbabwe": {
-        "name": "Zimbabwe",
-        "description": "Zimbabwean cuisine features hearty dishes and flavours influenced by local produce and traditional cooking.",
-        "recipes": [
-            {
-                "name": "Sadza",
-                "image": "img/zimbabwe/sadza.jpg",
-                "ingredients": ["Maize meal", "Water"],
-                "instructions": "Boil water, add maize meal, and stir until thick."
-            },
-            {
-                "name": "Beef Stew",
-                "image": "img/zimbabwe/beef_stew.jpg",
-                "ingredients": ["Beef", "Tomatoes", "Onions", "Garlic"],
-                "instructions": "Cook beef with vegetables for a rich stew."
-            },
-            {
-                "name": "Muriwo Unedovi",
-                "image": "img/zimbabwe/muriwo.jpg",
-                "ingredients": ["Leafy greens", "Peanut butter"],
-                "instructions": "Simmer greens with peanut butter until creamy."
-            }
-        ]
+        "description": "Zimbabwean cuisine is maize-based (sadza), with stews, leafy greens and snacks; meals are often simple and hearty.",
+        "recipes": {
+            "Main": [
+                {
+                    "name": "Sadza",
+                    "image": "sadza.jpg",
+                    "ingredients": ["Maize meal", "Water"],
+                    "instructions": "Cook maize meal into a firm porridge."
+                }
+            ],
+            "Side": [
+                {
+                    "name": "Muriwo Unedovi",
+                    "image": "muriwo.jpg",
+                    "ingredients": ["Greens", "Peanut butter"],
+                    "instructions": "Cook greens and mix with peanut butter sauce."
+                }
+            ],
+            "Dessert": [
+                {
+                    "name": "Mapopo Candy (Papaya Strips)",
+                    "image": "mapopo.jpg",
+                    "ingredients": ["Papaya", "Sugar"],
+                    "instructions": "Cook papaya strips in sugar syrup until chewy."
+                }
+            ]
+        },
+        "quiz": [
+                {"type":"mcq","question":"Sadza is most similar to which of these?","options":["Porridge made from maize meal","Rice pilaf","Baked bread loaf","Noodles"],"answer":"Porridge made from maize meal"},
+                {"type":"mcq","question":"Muriwo unedovi is a dish combining greens with which ingredient?","options":["Peanut butter","Yogurt","Tomato jam","Coconut milk"],"answer":"Peanut butter"},
+                {"type":"mcq","question":"Mapopo candy uses which fruit as its base?","options":["Papaya","Mango","Banana","Guava"],"answer":"Papaya"},
+                {"type":"tf","question":"Sadza is traditionally eaten with the hands or a serving utensil, not forks. (True/False)","answer":True},
+                {"type":"tf","question":"Zimbabwean cuisine heavily features maize as a staple. (True/False)","answer":True},
+                {"type":"tf","question":"Mapopo candy is a savoury fermented dish. (True/False)","answer":False}
+            ]
     }
+
 }
