@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ country.title() }} - Quiz</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="quiz-container">
+    <h2>Quiz: {{ country|title }} (Question {{ qnum }} of {{ total }})</h2>
+
+    <form method="POST" id="quiz-form">
+        <div class="card question-card {{ country }}-qcard">
+            <div class="question-text">
+                {{ question.question }}
+            </div>
+
+            <div class="answers">
+                {% if question.type == "mcq" %}
+                    {% for opt in question.options %}
+                        <label class="option">
+                            <input type="radio" name="answer" value="{{ opt }}" required> {{ opt }}
+                        </label>
+                    {% endfor %}
+                {% elif question.type == "tf" %}
+                    <label class="option">
+                        <input type="radio" name="answer" value="True" required> True
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="answer" value="False" required> False
+                    </label>
+                {% endif %}
+            </div>
+
+            <div class="card-actions">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
+
+</body>
+</html>
