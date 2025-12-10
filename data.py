@@ -22,7 +22,7 @@ country_data = {
                     "name": "Fried Plantain",
                     "image": "plantain.jpg",
                     "ingredients": ["Ripe plantains", "Oil", "Salt"],
-                    "instructions": "Slice plantains and fry in hot oil until golden."
+                    "instructions": ["Slice plantains and fry in hot oil until golden."]
                 }
             ],
             "Dessert": [
@@ -30,7 +30,7 @@ country_data = {
                     "name": "Chin Chin",
                     "image": "chinchin.jpg",
                     "ingredients": ["Flour", "Sugar", "Milk", "Butter", "Oil"],
-                    "instructions": "Mix dough, cut into pieces, and fry until crispy."
+                    "instructions": ["Mix dough, cut into pieces, and fry until crispy."]
                 }
             ]
         },
@@ -52,13 +52,13 @@ country_data = {
                     "name": "Waakye",
                     "image": "waakye.jpg",
                     "ingredients": ["Rice", "Black-eyed beans", "Waakye leaves"],
-                    "instructions": "Cook beans and rice together with waakye leaves for colour."
+                    "instructions": ["Cook beans and rice together with waakye leaves for colour."]
                 },
                 {
                     "name": "Light Soup",
                     "image": "light_soup.jpg",
                     "ingredients": ["Tomatoes", "Pepper", "Fish or meat", "Onions"],
-                    "instructions": "Blend vegetables; simmer with meat and seasonings."
+                    "instructions": ["Blend vegetables; simmer with meat and seasonings."]
                 }
             ],
             "Side": [
@@ -66,7 +66,7 @@ country_data = {
                     "name": "Kelewele",
                     "image": "kelewele.jpg",
                     "ingredients": ["Plantains", "Ginger", "Chili", "Oil"],
-                    "instructions": "Season diced plantain with spices and fry until crispy."
+                    "instructions": ["Season diced plantain with spices and fry until crispy."]
                 }
             ],
             "Dessert": [
@@ -74,7 +74,7 @@ country_data = {
                     "name": "Atadwe Milk",
                     "image": "atadwe_milk.jpg",
                     "ingredients": ["Tiger nuts", "Sugar", "Water"],
-                    "instructions": "Blend soaked tiger nuts with water and sweeten lightly."
+                    "instructions": ["Blend soaked tiger nuts with water and sweeten lightly."]
                 }
             ]
         },
@@ -96,7 +96,7 @@ country_data = {
                     "name": "Thieboudienne",
                     "image": "thieb.jpg",
                     "ingredients": ["Fish", "Rice", "Tomato paste", "Vegetables"],
-                    "instructions": "Cook fish in tomato stew; add rice and steam with vegetables."
+                    "instructions": ["Cook fish in tomato stew; add rice and steam with vegetables."]
                 }
             ],
             "Side": [
@@ -104,7 +104,7 @@ country_data = {
                     "name": "Accara",
                     "image": "accara.jpg",
                     "ingredients": ["Black-eyed peas", "Onions", "Oil"],
-                    "instructions": "Blend soaked beans with onions and fry into fritters."
+                    "instructions": ["Blend soaked beans with onions and fry into fritters."]
                 }
             ],
             "Dessert": [
@@ -112,7 +112,7 @@ country_data = {
                     "name": "Sombi (Coconut Rice Pudding)",
                     "image": "sombi.jpg",
                     "ingredients": ["Rice", "Coconut milk", "Sugar"],
-                    "instructions": "Cook rice in coconut milk and sweeten gently."
+                    "instructions": ["Cook rice in coconut milk and sweeten gently."]
                 }
             ]
         },
@@ -134,7 +134,7 @@ country_data = {
                     "name": "Ugali and Sukuma Wiki",
                     "image": "ugali.jpg",
                     "ingredients": ["Maize flour", "Water", "Collard greens"],
-                    "instructions": "Cook maize flour into a stiff dough; sauté greens and serve together."
+                    "instructions": ["Cook maize flour into a stiff dough; sauté greens and serve together."]
                 }
             ],
             "Side": [
@@ -142,7 +142,7 @@ country_data = {
                     "name": "Chapati",
                     "image": "chapati.jpg",
                     "ingredients": ["Flour", "Oil", "Salt", "Water"],
-                    "instructions": "Knead dough, roll into circles, and fry on a hot pan."
+                    "instructions": ["Knead dough, roll into circles, and fry on a hot pan."]
                 }
             ],
             "Dessert": [
@@ -150,7 +150,7 @@ country_data = {
                     "name": "Mahamri",
                     "image": "mahamri.jpg",
                     "ingredients": ["Flour", "Yeast", "Coconut milk", "Sugar"],
-                    "instructions": "Fry slightly sweet coconut dough until golden and puffy."
+                    "instructions": ["Fry slightly sweet coconut dough until golden and puffy."]
                 }
             ]
         },
@@ -172,7 +172,7 @@ country_data = {
                     "name": "Doro Wat",
                     "image": "doro_wat.jpg",
                     "ingredients": ["Chicken", "Berbere spice", "Onions", "Eggs"],
-                    "instructions": "Slow-cook onions and spices; add chicken and simmer until tender."
+                    "instructions": ["Slow-cook onions and spices; add chicken and simmer until tender."]
                 }
             ],
             "Side": [
@@ -180,7 +180,7 @@ country_data = {
                     "name": "Injera",
                     "image": "injera.jpg",
                     "ingredients": ["Teff flour", "Water"],
-                    "instructions": "Ferment batter; cook on a flat pan to form spongy bread."
+                    "instructions": ["Ferment batter; cook on a flat pan to form spongy bread."]
                 }
             ],
             "Dessert": [
@@ -188,7 +188,7 @@ country_data = {
                     "name": "Himbasha",
                     "image": "himbasha.jpg",
                     "ingredients": ["Flour", "Sugar", "Cardamom", "Yeast"],
-                    "instructions": "Bake a soft, lightly sweetened flatbread flavoured with cardamom."
+                    "instructions": ["Bake a soft, lightly sweetened flatbread flavoured with cardamom."]
                 }
             ]
         },
@@ -210,7 +210,7 @@ country_data = {
                     "name": "Chicken Tagine",
                     "image": "tagine.jpg",
                     "ingredients": ["Chicken", "Preserved lemon", "Olives", "Spices"],
-                    "instructions": "Slow-cook chicken with spices in a tagine pot."
+                    "instructions": ["Slow-cook chicken with spices in a tagine pot."]
                 }
             ],
             "Side": [
@@ -218,7 +218,7 @@ country_data = {
                     "name": "Couscous",
                     "image": "couscous.jpg",
                     "ingredients": ["Couscous", "Stock", "Vegetables"],
-                    "instructions": "Steam couscous over broth and fluff before serving."
+                    "instructions": ["Steam couscous over broth and fluff before serving."]
                 }
             ],
             "Dessert": [
@@ -226,7 +226,7 @@ country_data = {
                     "name": "Msemen with Honey",
                     "image": "msemen.jpg",
                     "ingredients": ["Flour", "Semolina", "Butter", "Honey"],
-                    "instructions": "Pan-fry layered flatbread and drizzle with honey."
+                    "instructions": ["Pan-fry layered flatbread and drizzle with honey."]
                 }
             ]
         },
@@ -248,7 +248,7 @@ country_data = {
                     "name": "Koshari",
                     "image": "koshari.jpg",
                     "ingredients": ["Lentils", "Rice", "Pasta", "Tomato sauce"],
-                    "instructions": "Layer rice, lentils, pasta, and top with spicy tomato sauce."
+                    "instructions": ["Layer rice, lentils, pasta, and top with spicy tomato sauce."]
                 }
             ],
             "Side": [
@@ -256,7 +256,7 @@ country_data = {
                     "name": "Ful Medames",
                     "image": "ful.jpg",
                     "ingredients": ["Fava beans", "Oil", "Lemon"],
-                    "instructions": "Simmer fava beans and serve with olive oil and lemon."
+                    "instructions": ["Simmer fava beans and serve with olive oil and lemon."]
                 }
             ],
             "Dessert": [
@@ -264,7 +264,7 @@ country_data = {
                     "name": "Basbousa",
                     "image": "basbousa.jpg",
                     "ingredients": ["Semolina", "Sugar", "Butter", "Syrup"],
-                    "instructions": "Bake semolina cake and soak in sweet syrup."
+                    "instructions": ["Bake semolina cake and soak in sweet syrup."]
                 }
             ]
         },
@@ -286,7 +286,7 @@ country_data = {
                     "name": "Bobotie",
                     "image": "bobotie.jpg",
                     "ingredients": ["Minced meat", "Spices", "Egg custard"],
-                    "instructions": "Bake seasoned minced meat topped with custard."
+                    "instructions": ["Bake seasoned minced meat topped with custard."]
                 }
             ],
             "Side": [
@@ -294,7 +294,7 @@ country_data = {
                     "name": "Chakalaka",
                     "image": "chakalaka.jpg",
                     "ingredients": ["Peppers", "Beans", "Carrots"],
-                    "instructions": "Cook vegetables with spices into a chunky relish."
+                    "instructions": ["Cook vegetables with spices into a chunky relish."]
                 }
             ],
             "Dessert": [
@@ -302,7 +302,7 @@ country_data = {
                     "name": "Melktert",
                     "image": "melktert.jpg",
                     "ingredients": ["Milk", "Sugar", "Cinnamon", "Pastry"],
-                    "instructions": "Bake creamy milk tart with cinnamon topping."
+                    "instructions": ["Bake creamy milk tart with cinnamon topping."]
                 }
             ]
         },
@@ -324,7 +324,7 @@ country_data = {
                     "name": "Ndolé",
                     "image": "ndole.jpg",
                     "ingredients": ["Bitterleaf", "Peanuts", "Meat"],
-                    "instructions": "Cook bitterleaf with peanut paste and meat into a rich stew."
+                    "instructions": ["Cook bitterleaf with peanut paste and meat into a rich stew."]
                 }
             ],
             "Side": [
@@ -332,7 +332,7 @@ country_data = {
                     "name": "Puff Puff",
                     "image": "puff_puff.jpg",
                     "ingredients": ["Flour", "Sugar", "Yeast"],
-                    "instructions": "Fry sweet yeasted dough until golden."
+                    "instructions": ["Fry sweet yeasted dough until golden."]
                 }
             ],
             "Dessert": [
@@ -340,7 +340,7 @@ country_data = {
                     "name": "Corn Fritters",
                     "image": "corn_fritters.jpg",
                     "ingredients": ["Corn", "Flour", "Oil"],
-                    "instructions": "Mix corn batter and fry until crispy."
+                    "instructions": ["Mix corn batter and fry until crispy."]
                 }
             ]
         },
@@ -362,7 +362,7 @@ country_data = {
                     "name": "Sadza",
                     "image": "sadza.jpg",
                     "ingredients": ["Maize meal", "Water"],
-                    "instructions": "Cook maize meal into a firm porridge."
+                    "instructions": ["Cook maize meal into a firm porridge."]
                 }
             ],
             "Side": [
@@ -370,7 +370,7 @@ country_data = {
                     "name": "Muriwo Unedovi",
                     "image": "muriwo.jpg",
                     "ingredients": ["Greens", "Peanut butter"],
-                    "instructions": "Cook greens and mix with peanut butter sauce."
+                    "instructions": ["Cook greens and mix with peanut butter sauce."]
                 }
             ],
             "Dessert": [
@@ -378,7 +378,7 @@ country_data = {
                     "name": "Mapopo Candy (Papaya Strips)",
                     "image": "mapopo.jpg",
                     "ingredients": ["Papaya", "Sugar"],
-                    "instructions": "Cook papaya strips in sugar syrup until chewy."
+                    "instructions": ["Cook papaya strips in sugar syrup until chewy."]
                 }
             ]
         },

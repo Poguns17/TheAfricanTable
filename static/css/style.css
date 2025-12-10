@@ -225,6 +225,53 @@ main {
     font-weight: bold;
 }
 
+/* --------Home Page Randomizer Card-------------- */
+.home-randomizer-card {
+    background: linear-gradient(to bottom right, #fff9e6, #f5f5dc);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 80px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-randomizer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.home-randomizer-card h2 {
+    font-size: 2rem;
+    color: #2E2E2E;
+    margin-bottom: 25px;
+}
+
+/* Button matches site theme */
+.btn-randomizer {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #C1272D;
+    color: #F5F5DC;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.btn-randomizer:hover {
+    background-color: #A01F24;
+    transform: scale(1.05);
+}
+
+
+
+
+
 
 
 
@@ -627,13 +674,6 @@ h1 {
 
 
 
-
-
-
-
-
-
-
 /* RECIPE PAGE */
 .recipe-container {
     width: 70%;
@@ -702,6 +742,81 @@ h1 {
 
 
 
+/* ---------------------------Randomiser page--------------------*/
+.randomizer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 80vh; /* vertically center */
+    background-color: #E4C590;
+    font-family: 'Arial', sans-serif;
+}
+
+.randomizer-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #C1272D;
+}
+
+.randomizer-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #FAF0CA;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.randomizer-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #EFCB68;
+}
+
+.randomizer-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.randomizer-container select {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.randomizer-container button {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: #C1272D;
+    color: #F5F5DC;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.randomizer-container button:hover {
+    background-color: #A01F24;
+}
+
+#category-select {
+    width: 100%;
+}
+
+#category-select {
+    display: none;
+}
 
 
 

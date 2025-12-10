@@ -21,3 +21,17 @@ document.querySelectorAll('.toggle-section').forEach(btn => {
     }
   });
 });
+
+// randomiser page
+// Show/hide category dropdown depending on choice_type
+const countryRadio = document.querySelector('input[value="country"]');
+const recipeRadio = document.querySelector('input[value="recipe"]');
+const categorySelect = document.getElementById('category-select');
+
+function toggleCategory() {
+    categorySelect.style.display = recipeRadio.checked ? "block" : "none";
+}
+
+countryRadio.addEventListener("change", toggleCategory);
+recipeRadio.addEventListener("change", toggleCategory);
+toggleCategory();
