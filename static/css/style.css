@@ -225,41 +225,47 @@ main {
     font-weight: bold;
 }
 
-
-/* ------------------Home Page Randomizer----------------- */
-.home-randomizer {
-    display: block;
-    flex-direction: column;
-    margin: 50px 0;
-    margin-top: 90px;
-    gap: 20px;
-}
-
-.home-randomizer h2 {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.btn-randomizer {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 12px 30px;
-    background-color: #008B5F;
-    color: #2F2F2F;
-    font-weight: bold;
-    font-size: 1.5rem;
+/* --------Home Page Randomizer Card-------------- */
+.home-randomizer-card {
+    background: linear-gradient(to bottom right, #fff9e6, #f5f5dc);
+    padding: 40px 30px;
     border-radius: 20px;
-    text-decoration: none;
-    height: 70px;
-    width: 500px;
-    margin-top: 20px;
-    transition: background-color 0.2s ease;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 80px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.home-randomizer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.home-randomizer-card h2 {
+    font-size: 2rem;
+    color: #2E2E2E;
+    margin-bottom: 25px;
+}
+
+/* Button matches site theme */
+.btn-randomizer {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #C1272D;
+    color: #F5F5DC;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
 .btn-randomizer:hover {
-    background-color: #2D6A4F;
-    transform: translateY(-3px);
+    background-color: #A01F24;
+    transform: scale(1.05);
 }
 
 
@@ -736,8 +742,7 @@ h1 {
 
 
 
-/* ---------------Randomiser page---------------------------------------*/
-/* --- Randomizer Page --- */
+/* ---------------------------Randomiser page--------------------*/
 .randomizer-container {
     display: flex;
     flex-direction: column;
@@ -746,14 +751,14 @@ h1 {
     padding: 50px 20px;
     text-align: center;
     min-height: 80vh; /* vertically center */
-    background-color: #2F2F2F; /* optional light beige background */
+    background-color: #E4C590;
     font-family: 'Arial', sans-serif;
 }
 
 .randomizer-container h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #C1272D; /* match your theme */
+    color: #C1272D;
 }
 
 .randomizer-container form {
@@ -809,14 +814,9 @@ h1 {
     width: 100%;
 }
 
-/* optional: hide category by default, show only when recipe selected */
 #category-select {
     display: none;
 }
-
-
-
-
 
 
 
