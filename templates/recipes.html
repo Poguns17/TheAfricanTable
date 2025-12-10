@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ recipe.name }}</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<div class="recipe-container">
+<a href="{{ url_for('country_page', country=country) }}" class="back-btn">← Back to {{ country|title }}</a>
+
+    <h1 class="recipe-title">{{ recipe.name }}</h1>
+
+    <!-- Recipe image -->
+    {% if recipe.image %}
+        <div class="recipe-image">
+            <img src="{{ url_for('static', filename='img/recipes/' + recipe.image) }}" alt="{{ recipe.name }}">
+        </div>
+    {% endif %}
+
+    <!-- Ingredients and Instructions -->
+    <div class="recipe-sections">
+
+        {% if recipe.ingredients %}
+            <div class="recipe-box">
+                <h2>Ingredients</h2>
+                <ul class="ingredients-list">
+                    {% for item in recipe.ingredients %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% if recipe.instructions %}
+            <div class="recipe-box">
+                <h2>Instructions</h2>
+                <ol class="instructions-list">
+                    {% for step in recipe.instructions %}
+                        <li>{{ step }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+<script src="static/js/app.js"></script>
+
+</body>
+</html>

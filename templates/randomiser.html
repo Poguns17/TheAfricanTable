@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discover something new!</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="randomizer-container">
+    <h1>Global Randomizer</h1>
+
+    <form method="POST" class="randomizer-form">
+        <!-- Choice type radio buttons -->
+        <div class="radio-group">
+            <label class="radio-label">
+                <input type="radio" name="choice_type" value="country" checked class="radio-input">
+                Random Country
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="choice_type" value="recipe" class="radio-input">
+                Random Recipe
+            </label>
+        </div>
+
+        <!-- Category select -->
+        <div id="category-select" class="category-select">
+            <label for="category" class="category-label">Select recipe category:</label>
+            <select name="category" id="category" class="category-dropdown">
+                {% for cat in category_options %}
+                    <option value="{{ cat }}">{{ cat }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="randomizer-btn">🎲 Generate</button>
+    </form>
+</div>
+
+<script src="static/js/app.js"></script>
+{% endblock%}
+
+</body>
+</html>
