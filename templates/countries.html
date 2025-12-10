@@ -6,21 +6,10 @@
 </head>
 <body>
 {% extends "base.html" %}
-{% block content %}
+    {% block content %}
 
-    <div class="container">
-        <h1>Countries</h1>
-        <div class="countries-list">
-            {% for country in countries %}
-            <a href="/country/{{country}}" class="country-card {{ country }}-card"> <div class="country-name">{{ country.title() }}</div> </a>
-            {% endfor %}
-        </div>
-    </div>
+    <p>This is the countries page</p>
 
-
-{% endblock %}
-
-<script src="static/js/app.js"></script>
-
+    {% endblock %}
 </body>
-</html>
+</html>g
