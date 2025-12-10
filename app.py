@@ -1,7 +1,16 @@
 from flask import Flask, render_template, url_for, redirect, request, flash, session
 from data import country_data
 import random
+import os
+from flask_sqlalchemy import SQLAlchemy
+from models import db, Country, Recipe, QuizQuestion
+
 app = Flask(__name__)
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///africantable.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db.init_app(app)
 
 app.secret_key = "table"
 
@@ -218,3 +227,21 @@ def randomizer():
 
     return render_template(
         "randomiser.html", category_options=category_options, selected_category=selected_category)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("error.html", code=404, title="Page Not Found", message="Oops! The page you were looking for doesn't exist."), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template("error.html", code=500, title="Server Error", message="Something went wrong on our end. Please try again later."), 500
+
+
+# temporary test route
+@app.route("/create-db")
+def create_db():
+    db.create_all()
+    return "Database created!"
+
