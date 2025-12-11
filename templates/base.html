@@ -23,6 +23,13 @@
                 <a href="{{ url_for('randomizer') }}">RANDOMIZERS</a>
                 <a href="{{ url_for('about') }}">ABOUT</a>
 
+                {% if current_user.is_authenticated %}
+                    <span>Hello, {{ current_user.username.title() }}</span>
+                    <a href="{{ url_for('logout') }}">LOGOUT</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}">LOGIN</a>
+                    <a href="{{ url_for('signup') }}">SIGN UP</a>
+                {% endif %}
             </nav>
         </div>
     </header>

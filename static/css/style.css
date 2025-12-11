@@ -810,6 +810,111 @@ h1 {
 
 
 
+/* ------------------------Sign up an login pages----------------*/
+
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #FFFFFF;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    border: 1px solid #eee;
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #E3842A;
+}
+
+/* flash message*/
+.auth-flash {
+    background: #ffe8e8;
+    color: #b10000;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/*form*/
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth-field label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #E3842A;
+}
+
+.auth-field input {
+    width: 90%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.auth-field input:focus {
+    border-color: #008080;
+    box-shadow: 0 0 4px rgba(0,128,128,0.3);
+    outline: none;
+}
+
+.auth-btn {
+    width: 100%;
+    background: #E3842A;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.auth-btn:hover {
+    background: #CA6E1D;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.auth-switch a {
+    color: #008080;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
 
 
 /*-----------------ABOUT PAGE----------------------------------*/

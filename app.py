@@ -1,17 +1,81 @@
 from flask import Flask, render_template, url_for, redirect, request, flash, session
 from data import country_data
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 import random, json, os
-from flask_sqlalchemy import SQLAlchemy
-from models import db, Country, Recipe, QuizQuestion
+from models import db, Country, Recipe, QuizQuestion, User
 
 app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///africantable.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
 db.init_app(app)
 
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "login"
+
 app.secret_key = "table"
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+
+# sign up and login
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    if request.method == "POST":
+        username = request.form["username"].strip().lower()
+        email = request.form["email"].strip().lower()
+        password = request.form["password"]
+
+        # Check existing user
+        if User.query.filter((User.username == username) | (User.email == email)).first():
+            flash("Username or email already exists")
+            return redirect(url_for("signup"))
+
+        user = User(username=username, email=email)
+        user.set_password(password)
+
+        db.session.add(user)
+        db.session.commit()
+
+        login_user(user)
+        return redirect(url_for("home"))
+
+    return render_template("signup.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        username = request.form["username"].strip().lower()
+        password = request.form["password"]
+
+        user = User.query.filter_by(username=username).first()
+
+        if not user or not user.check_password(password):
+            flash("Invalid username or password")
+            return redirect(url_for("login"))
+
+        login_user(user)
+        return redirect(url_for("home"))
+
+    return render_template("login.html")
+
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for("home"))
+
+
+@app.route("/profile")
+@login_required
+def profile():
+    return render_template("profile.html")
 
 
 # home page
