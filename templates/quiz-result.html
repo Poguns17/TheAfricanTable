@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ country.title() }} - quiz results </title>
+    <title>{{ country.name.title() }} - quiz results </title>
 </head>
 <body>
 {% extends "base.html" %}
 
 {% block content %}
-<div class="results-container {{ country }}-results">
-    <h1 class="results-title">Quiz Results for {{ country|capitalize }}</h1>
+<div class="results-container {{ country.name }}-results">
+    <h1 class="results-title">Quiz Results for {{ country.name.title() }}</h1>
 
     <div class="score-box">
         <div class="score-number">{{ score }}/{{ total }}</div>
@@ -22,7 +22,7 @@
 
     <div class="answers-list">
         {% for item in results %}
-        <div class="answer-card"> {{ 'correct' if item.correct else 'wrong' }}
+        <div class="answer-card {{ 'correct' if item.correct else 'wrong' }}">
             <p class="question">{{ item.question }}</p>
             <p class="user-answer">Your answer: {{ item.user_answer }}</p>
             <p class="correct-answer">Correct answer: {{ item.correct_answer }}</p>
@@ -30,8 +30,8 @@
         {% endfor %}
     </div>
 
-    <a href="{{ url_for('country_page', country=country) }}" class="back-button">Back to {{ country|capitalize }}</a>
-    <a href="{{ url_for('country_quiz', country=country) }}?restart=1" class="back-button" >Try again</a>
+    <a href="{{ url_for('country_page', country=country.name) }}" class="back-button">Back to {{ country.name.title() }}</a>
+    <a href="{{ url_for('country_quiz', country=country.name) }}?restart=1" class="back-button" >Try again</a>
 
 </div>
 {% endblock %}

@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ country.title() }} - Quiz</title>
+    <title>{{ country.name.title() }} - Quiz</title>
 </head>
 <body>
 {% extends "base.html" %}
 {% block content %}
 
 <div class="quiz-container">
-    <h2>Quiz: {{ country|title }} (Question {{ qnum }} of {{ total }})</h2>
+    <h2>Quiz: {{ country.name.title() }} (Question {{ qnum }} of {{ total }})</h2>
 
     <form method="POST" id="quiz-form">
-        <div class="card question-card {{ country }}-qcard">
-            <div class="question-text">
-                {{ question.question }}
-            </div>
+        <div class="card question-card {{ country.name }}-qcard">
+            <div class="question-text"> {{ question.question }}</div>
 
             <div class="answers">
                 {% if question.type == "mcq" %}
