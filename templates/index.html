@@ -30,9 +30,9 @@
         <h2>Discover countries</h2>
         <div class="countries-preview">
             {% for country in preview_countries %}
-                <a href="/country/{{ country }}" class="country-card">
-                    <img src="{{ url_for('static', filename='img/flags/' ~ country ~ '.png') }}" alt="{{ country.title() }} Flag">
-                    <div class="country-name">{{ country.title() }}</div>
+                <a href="/country/{{ country.name }}" class="country-card">
+                    <img src="{{ url_for('static', filename='img/flags/' ~ country.name ~ '.png') }}" alt="{{ country.name.title() }} Flag">
+                    <div class="country-name">{{ country.name.title() }}</div>
                 </a>
             {% endfor %}
             <a href="{{ url_for('countries') }}" class="discover-btn"> Discover More</a>

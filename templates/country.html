@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ country.title() }}</title>
+    <title>{{ country.name.title() }}</title>
 </head>
 <body>
 {% extends "base.html" %}
@@ -11,17 +11,18 @@
 
 <div class="country-container">
 
-<h1 class="country-header">{{ country.title() }}</h1>
+<h1 class="country-header">{{ country.name.title() }}</h1>
 
-<p class="country-description">{{ data.description }}</p>
+<p class="country-description">{{ country.description }}</p>
 
 <h2 class="header">Recipes</h2>
-{% for category, recipe_list in recipes.items() %}
+
+{% for category, recipe_list in recipes_by_category.items() %}
     <h2 class="category-title">{{ category }}</h2>
 
     <div class="recipe-grid">
         {% for recipe in recipe_list %}
-            <a href="{{ url_for('recipe_page', country=country, recipe_name=recipe.name) }}" class="recipe-card">
+            <a href="{{ url_for('recipe_page', country=country.name, recipe_name=recipe.name) }}" class="recipe-card">
                 <img src="{{ url_for('static', filename='img/recipes/' + recipe.image) }}" alt="{{ recipe.name }}">
                 <div class="recipe-info">
                     <h3>{{ recipe.name }}</h3>
@@ -33,13 +34,13 @@
 {% endfor %}
 
 <h3 class="random-text">Not sure what to make? </h3>
-<a href="{{ url_for('random_recipe_from_country', country=country) }}" class="random-btn">🎲 Give me a random dish!</a>
+<a href="{{ url_for('random_recipe_from_country', country=country.name) }}" class="random-btn">🎲 Give me a random dish!</a>
 
-<div class="quiz-section {{ country }}-section">
+<div class="quiz-section {{ country.name }}-section">
     <h2>Test Your Knowledge</h2>
-    <p>Try this {{ quiz_length }}-question quiz about {{ country|title }}’s cuisine.</p>
+    <p>Try this {{ quiz_length }}-question quiz about {{ country.name.title() }}’s cuisine.</p>
 
-    <a href="{{ url_for('country_quiz', country=country) }}" class="quiz-btn">
+    <a href="{{ url_for('country_quiz', country=country.name) }}" class="quiz-btn">
         Take the Quiz
     </a>
 </div>

@@ -12,7 +12,7 @@
         <h1>Countries</h1>
         <div class="countries-list">
             {% for country in countries %}
-            <a href="/country/{{country}}" class="country-card {{ country }}-card"> <div class="country-name">{{ country.title() }}</div> </a>
+            <a href="{{ url_for('country_page', country=country.name) }}" class="country-card {{ country.name }}-card"> <div class="country-name">{{ country.name.title() }}</div> </a>
             {% endfor %}
         </div>
     </div>
