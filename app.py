@@ -112,7 +112,8 @@ def country_page(country):
     # Count quiz questions
     quiz_length = QuizQuestion.query.filter_by(country_id=country_obj.id).count()
 
-    return render_template("country.html", country=country_obj, description=country_obj.description, recipes_by_category=recipes_by_category, quiz_length=quiz_length)
+    return render_template("country.html", country=country_obj, description=country_obj.description,
+                           recipes_by_category=recipes_by_category, quiz_length=quiz_length)
 
 
 # get random recipe on country page
@@ -126,7 +127,8 @@ def random_recipe_from_country(country):
         return redirect(url_for("country_page", country=country))
 
     chosen_recipe = random.choice(recipes)
-    return redirect(url_for("recipe_page", country=country_obj.name, recipe_name=chosen_recipe.name.lower().replace(" ", "-")))
+    return redirect(
+        url_for("recipe_page", country=country_obj.name, recipe_name=chosen_recipe.name.lower().replace(" ", "-")))
 
 
 # recipes
@@ -139,10 +141,7 @@ def recipe_page(country, recipe_name):
         Recipe.country_id == country_obj.id
     ).first_or_404()
 
-    # Convert JSON → Python lists
-    recipe.ingredients = json.loads(recipe.ingredients)
-    recipe.instructions = json.loads(recipe.instructions)
-
+    # Properties automatically handle JSON conversion - no need for json.loads()
     return render_template("recipes.html", country=country_obj, recipe=recipe)
 
 
@@ -150,24 +149,12 @@ def recipe_page(country, recipe_name):
 def prepare_quiz_questions(country_id):
     questions = QuizQuestion.query.filter_by(country_id=country_id).all()
     random.shuffle(questions)
-
-    # Parse options + answer JSON
-    for q in questions:
-        try:
-            q.options = json.loads(q.options)
-        except:
-            q.options = []
-        try:
-            q.answer = json.loads(q.answer)
-        except:
-            pass
     return questions
 
 
 # country quiz on the country page
 @app.route("/country/<country>/quiz", methods=["GET", "POST"])
 def country_quiz(country):
-    # Get the Country object (case-insensitive)
     country_obj = Country.query.filter(Country.name.ilike(country.lower())).first_or_404()
     session_key = f"quiz_{country_obj.id}_state"
 
@@ -183,7 +170,7 @@ def country_quiz(country):
 
         session[session_key] = {
             "index": 0,
-            "questions": [q.id for q in questions],
+            "questions": question_ids,
             "answers": []
         }
 
@@ -195,11 +182,8 @@ def country_quiz(country):
     if request.method == "POST":
         current_q_id = state["questions"][idx]
         current_q = QuizQuestion.query.get(current_q_id)
-        # Parse stored JSON
-        try:
-            correct_answer = json.loads(current_q.answer)
-        except:
-            correct_answer = current_q.answer
+
+        correct_answer = current_q.answer
         user_answer = request.form.get("answer")
 
         # Normalize True/False answers
@@ -238,11 +222,6 @@ def country_quiz(country):
 
     # Show current question
     current_q = QuizQuestion.query.get(state["questions"][state["index"]])
-    # Parse options
-    try:
-        current_q.options = json.loads(current_q.options)
-    except:
-        current_q.options = []
 
     qnum = state["index"] + 1
     return render_template(
@@ -291,17 +270,20 @@ def randomizer():
 # error page
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("error.html", code=404, title="Page Not Found", message="Oops! The page you were looking for doesn't exist."), 404
+    return render_template("error.html", code=404, title="Page Not Found",
+                           message="Oops! The page you were looking for doesn't exist."), 404
 
 
 @app.errorhandler(500)
 def internal_server_error(e):
-    return render_template("error.html", code=500, title="Server Error", message="Something went wrong on our end. Please try again later."), 500
+    return render_template("error.html", code=500, title="Server Error",
+                           message="Something went wrong on our end. Please try again later."), 500
 
 
 # temporary test route
 @app.route("/create-db")
 def create_db():
+    db.drop_all()
     db.create_all()
     return "Database created!"
 
